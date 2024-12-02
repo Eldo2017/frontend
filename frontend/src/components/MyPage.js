@@ -9,7 +9,7 @@ const MyPage()=>{
 
     useEffect(()=>{
         //유저 정보 로드
-        axios.get(`http://localhost:4000/api/mypage/user-info/${userId}`)
+        axios.get(`http://localhost:3000/api/mypage/user-info/${userId}`)
             .then((response)=>setUserInfo(response.data))
             .catch((error)=>console.error(error));
     },[]);

@@ -5,7 +5,7 @@ const SellHistory=({userId})=>{
     const [sellHistory,setSellHistory]=useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:4000/api/mypage/sell-history/${userId}`)
+        axios.get(`http://localhost:3000/api/mypage/sell-history/${userId}`)
         .then((response)=>setSellHistory(response.data))
         .catch((error)=>console.error(error));
     },[userId]);

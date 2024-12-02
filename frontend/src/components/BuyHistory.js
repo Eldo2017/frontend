@@ -5,7 +5,7 @@ const BuyHistory = ({userId})=>{
     const [buyHistory,setBuyHistory]=useState([]);
 
     useEffect(()=>{
-        axios.get(`http://localhost:4000/api/mypage/buy-history/${userId}`)
+        axios.get(`http://localhost:3000/api/mypage/buy-history/${userId}`)
             .then((response)=>setBuyHistory(response.data))
             .catch((error)=>console.error(error));   
     },[userId]);
